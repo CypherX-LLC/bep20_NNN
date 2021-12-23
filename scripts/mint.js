@@ -24,7 +24,7 @@ async function main() {
 
   const deployerWallet = accounts[0]
   const deployer = accounts[0].address
-  const novemWallet = "0x6bF37653e17655472F229F66227fBa2Ca4Fb3782"
+  const novemWallet = "0xAbBBbac3E0CcF1a75D4eCCC6E47f249801033130"
   const mint_amount = new BN("5000")
 
   const NNN_Factory = await hre.ethers.getContractFactory("NNNToken");
