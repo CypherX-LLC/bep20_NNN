@@ -68,7 +68,9 @@
     "fork:deploy": "node ./_scripts.js fork:deploy",
     "fork:dev": "node ./_scripts.js fork:dev",
     "fork:node": "node ./_scripts.js fork:node",
-    "fork:test": "node ./_scripts.js fork:test"
+    "fork:test": "node ./_scripts.js fork:test",
+    "mint_nnn": "yarn hardhat --network mainnet run scripts/mint.js",
+    "burn_nnn": "yarn hardhat --network mainnet run scripts/burn.js"
   },
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^2.1.6",
