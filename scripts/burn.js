@@ -24,7 +24,7 @@ async function main() {
 
   const deployerWallet = accounts[0]
   const deployer = accounts[0].address
-  const burn_amount = new BN("75000")
+  const burn_amount = new BN("1")
 
   const NNN_Factory = await hre.ethers.getContractFactory("NNNToken");
   console.log("network name", hre.network.name)
@@ -51,10 +51,10 @@ async function main() {
   const final_burnamount = (one_nnn.mul(burn_amount)).toString()
 
   await nnn_proxy.burn(final_burnamount, { from: deployer })
-  console.log("burned:", burn_amount);
+  console.log("burned:", burn_amount.toString());
 
   const new_supply = await nnn_proxy.totalSupply();
-  console.log("new token supply: ", new_supply)
+  console.log("new token supply: ", new_supply.toString())
 }
 
 // We recommend this pattern to be able to use async/await everywhere
