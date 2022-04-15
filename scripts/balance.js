@@ -24,25 +24,26 @@ async function main() {
 
   const deployerWallet = accounts[0]
   const deployer = accounts[0].address
-  const novemWallet = "0xED3b232bCDe677037cABaaB174799Be35C58bc27"
-  const mint_amount = new BN("1000")
+  const novemWallet = "0xE9B92cf63A2ea146d30221A742EbB581CC81AeB7"
+  const mint_amount = new BN("300")
 
   const NNN_Factory = await hre.ethers.getContractFactory("NNNToken");
   console.log("network name", hre.network.name)
-  if (hre.network.name == 'hardhat') {
+ /*  if (hre.network.name == 'hardhat') {
     const nnn_proxy = await ethers.getContract("NNNToken", deployer);
   } else if (hre.network.name == 'testnet') {
     console.log("on testnet")
     const nnn_proxy = await NNN_Factory.attach("0x343323ef6E13b83E347566dC54Fec90aD0b66d41")
   } else if (hre.network.name == 'mainnet') {
     const nnn_proxy = await NNN_Factory.attach("0xB4E44dCAa4828a188955DAff5D8261a5E4876e26")
-  }
+  } */
+  const nnn_proxy = await NNN_Factory.attach("0x927dc843d9655eED4F72c51911b094B18904411b")
   console.log("nnn_proxy address: ", nnn_proxy.address)
 
   console.log("deployer address: ", deployer)
 
-  const supply = await nnn_proxy.totalSupply();
-  console.log(" token supply: ", supply.toString())
+  //const supply = await nnn_proxy.totalSupply();
+  //console.log(" token supply: ", supply.toString())
 
   const ownerBalance = await nnn_proxy.balanceOf(deployer);
 
@@ -50,7 +51,7 @@ async function main() {
   console.log("Novem Wallet balance before mint: ", (await nnn_proxy.balanceOf(novemWallet)).toString())
 
 
-  await nnn_proxy.mint(novemWallet, (one_nnn.mul(mint_amount)).toString())
+  //await nnn_proxy.mint(novemWallet, (one_nnn.mul(mint_amount)).toString())
   console.log("minted:", mint_amount);
 
   const new_supply = await nnn_proxy.totalSupply();
