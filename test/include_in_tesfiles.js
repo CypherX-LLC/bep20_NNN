@@ -1,4 +1,4 @@
-const FEE = 2000
+const FEE = 400
 const TOKEN_DEPLOYER_ACCOUNT = 0
 const TOKEN_NAME = "Novem Gold Token"
 const TOKEN_SYMBOL = "NNN"

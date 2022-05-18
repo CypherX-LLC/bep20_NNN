@@ -24,7 +24,7 @@ async function main() {
 
   const deployerWallet = accounts[0]
   const deployer = accounts[0].address
-  const novemWallet = "0xED3b232bCDe677037cABaaB174799Be35C58bc27"
+  const novemWallet = "0x1f8E73DE90096D15aDB633d8B5A4C0A546808Acd"
   const mint_amount = new BN("1000")
 
   const NNN_Factory = await hre.ethers.getContractFactory("NNNToken");
@@ -33,7 +33,7 @@ async function main() {
     const nnn_proxy = await ethers.getContract("NNNToken", deployer);
   } else if (hre.network.name == 'testnet') {
     console.log("on testnet")
-    const nnn_proxy = await NNN_Factory.attach("0x343323ef6E13b83E347566dC54Fec90aD0b66d41")
+    const nnn_proxy = await NNN_Factory.attach("0x70aF4c67f16019C13516D814aAf9A6aD74CFd2F4")
   } else if (hre.network.name == 'mainnet') {
     const nnn_proxy = await NNN_Factory.attach("0xB4E44dCAa4828a188955DAff5D8261a5E4876e26")
   }

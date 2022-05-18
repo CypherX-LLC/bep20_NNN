@@ -3,6 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/presets/ERC20PresetMinterPauserUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
 /**
  * @dev ERC20 token with minting, burning and pausable token transfers.
@@ -10,14 +11,15 @@ import "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol";
  */
 contract EnhancedMinterPauser is
     Initializable,
-    ERC20PresetMinterPauserUpgradeable
+    ERC20PresetMinterPauserUpgradeable,
+    OwnableUpgradeable
 {
     using SafeMathUpgradeable for uint256;
 
     //role for excluding addresses for feeless transfer
     bytes32 public constant FEE_EXCLUDED_ROLE = keccak256("FEE_EXCLUDED_ROLE");
 
-    // fee percent represented in integer for example 2000, will be used as 1/2000 = 0,05 percent
+    // fee percent represented in integer for example 400, will be used as 1/400 = 0,0025 percent
     uint32 public tokenTransferFeeDivisor;
 
     //address where the transfer fees will be sent
@@ -33,12 +35,13 @@ contract EnhancedMinterPauser is
         __ERC20_init_unchained(name, symbol);
         __ERC20PresetMinterPauser_init_unchained(name, symbol);
         __EnhancedMinterPauser_init_unchained();
+        __Ownable_init();
     }
 
     function __EnhancedMinterPauser_init_unchained() internal initializer {
         _setupRole(FEE_EXCLUDED_ROLE, _msgSender());
         setFeeWalletAddress(0x9D1Cb8509A7b60421aB28492ce05e06f52Ddf727);
-        setTransferFeeDivisor(2000);
+        setTransferFeeDivisor(400);
     }
 
     /**
@@ -120,7 +123,7 @@ contract EnhancedMinterPauser is
 
     /**
      * @dev sets the transfer fee
-     * example: divisor 2000 would equal to 0,05 percent; 1/2000 = 0,05/100
+     * example: divisor 400 would equal to 0,05 percent; 1/400 = 0,0025/100
      */
     function setTransferFeeDivisor(uint32 _tokenTransferFeeDivisor) public {
         require(
