@@ -66,6 +66,16 @@ describe('NNNToken', function () {
     expect(feeExcludeRole.toString()).to.equal(FEE_EXCLUDED_ROLE);
   });
 
+
+  it('change owner', async function () {
+    const {users, NNNToken} = await setup();
+    //console.log("owner address:",await NNNToken.owner())
+    await NNNToken.transferOwnership(users[2].address);
+    //console.log("users[2].address",users[2].address)
+    //console.log("owner address:",await NNNToken.owner())
+    expect((await NNNToken.owner()).toString()).to.equal(users[2].address);
+  });
+
   it('mint tokens without decimal places and sent to address WITHOUT substracting a fee', async function () {
     const {users, NNNToken} = await setup();
     NNNToken.mintWithoutDecimals(users[0].address, 1, false);
