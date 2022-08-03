@@ -2,6 +2,10 @@
 
 Novem Gold Token
 
+## Multisig
+
+https://gnosis-safe.io/app/bnb:0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C/home
+
 ## Deployed
 
 "DefaultProxyAdmin" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
