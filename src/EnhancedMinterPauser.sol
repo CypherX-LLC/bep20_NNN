@@ -40,7 +40,7 @@ contract EnhancedMinterPauser is
 
     function __EnhancedMinterPauser_init_unchained() internal initializer {
         _setupRole(FEE_EXCLUDED_ROLE, _msgSender());
-        setFeeWalletAddress(0x9D1Cb8509A7b60421aB28492ce05e06f52Ddf727);
+        setFeeWalletAddress(0xef7cD1379Ec7D0F673718343d19bDD59C165A7C6);
         setTransferFeeDivisor(400);
     }
 
