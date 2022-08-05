@@ -2,15 +2,17 @@
 
 Novem Gold Token
 
+## Multisig
+
+https://gnosis-safe.io/app/bnb:0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C/home
+
 ## Deployed
 
-"DefaultProxyAdmin" https://bscscan.com/address/0x7aab82Eb8fB14aC34EAfafE76A27cE7e1614D193
+"DefaultProxyAdmin" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
 
-"NVMToken_Implementation" https://bscscan.com/address/0x4Cdbd3D80036A05a3162D492287a0960dcE4A385
+"NVMToken_Implementation" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
 
-"NVMToken_Proxy" https://bscscan.com/address/0xB4E44dCAa4828a188955DAff5D8261a5E4876e26
-
-Fee Address: https://bscscan.com/address/0x6bF37653e17655472F229F66227fBa2Ca4Fb3782
+"NVMToken_Proxy" https://bscscan.com/address/0x5D5c5c1d14FaF8Ff704295b2F502dAA9D06799a0
 
 ## Audit
 
