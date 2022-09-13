@@ -16,7 +16,8 @@ https://gnosis-safe.io/app/bnb:0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C/home
 
 ## Audit
 
-https://github.com/selimerunkut/erc20_nnn/blob/042d8a88a483dede387a9f525c5c55430beadcd4/audit/Novem_Security_Audit_Report.pdf
+[Audit Report](audit/Novem_Security_Audit_Report.pdf)
+
 ## Technical Information
 
 Upgradable ERC20 Contract for the Binance Smart Chain
