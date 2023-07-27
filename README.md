@@ -48,7 +48,7 @@ example mint of 2 NNN tokens
 
 `await nnn_proxy.mint("<to_wallet_address>", "2000000000000000000")`
 
-add fee exclude role
+add fee exclude role (NOT POSSIBLE because of MULTSIG on BSC MAINNET)
 
 `const FEE_EXCLUDED_ROLE = "0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2"`
 
@@ -59,7 +59,38 @@ check if fee will excluded from address while transfer
 
 `await nnn_proxy.hasRole(FEE_EXCLUDED_ROLE, "<a_wallet_address>")`
 
-
 ### Verify
 
 `yarn hardhat --network testnet etherscan-verify`
+
+# Using Openzeppelin Defender for contract calls:
+
+https://defender.openzeppelin.com/
+
+## Create new proposal 
+
+choose `Admin action`
+
+<img width="953" alt="Screenshot 2023-07-27 at 16 43 36" src="https://github.com/CypherX-LLC/multisig_doc/assets/31136147/581a4280-aeeb-4141-84ed-1470a5f1af1d">
+
+Enter function name
+
+`Execution strategy` is `Multisig`
+enter NNN Multisig address: `0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C` (if needed)
+
+Describe the proposal and click `Create Admin action`
+
+<img width="794" alt="Screenshot 2023-07-27 at 16 18 41" src="https://github.com/CypherX-LLC/multisig_doc/assets/31136147/d6a44f48-93ff-42fb-8317-062227b8da51">
+
+You can ignore the warnings/errors and `Approve` the transaction
+
+### Gnosis Multisig
+
+The transaction should be visible in  Gnosis Multisig Queue:
+
+https://app.safe.global/transactions/queue?safe=bnb:0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C
+
+Send the above address to the other signing wallet(s)
+
+## Multisig doc is here:
+[USING-MULTISIG-WALLET.md](https://github.com/CypherX-LLC/multisig_doc/blob/b0c5619f1174c42176bca02b838effc03e8edf89/docs/USING-MULTISIG-WALLET.md)
