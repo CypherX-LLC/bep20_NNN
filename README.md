@@ -48,7 +48,7 @@ example mint of 2 NNN tokens
 
 `await nnn_proxy.mint("<to_wallet_address>", "2000000000000000000")`
 
-add fee exclude role (NOT POSSIBLE because of MULTSIG on BSC MAINNET)
+add fee exclude role
 
 `const FEE_EXCLUDED_ROLE = "0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2"`
 
@@ -63,11 +63,17 @@ check if fee will excluded from address while transfer
 
 `yarn hardhat --network testnet etherscan-verify`
 
+## Execute functions using BSC Scan
+
+https://bscscan.com/address/0x5d5c5c1d14faf8ff704295b2f502daa9d06799a0#writeProxyContract
+
+https://bscscan.com/address/0x5d5c5c1d14faf8ff704295b2f502daa9d06799a0#readProxyContract
+
 # Using Openzeppelin Defender for contract calls:
 
 https://defender.openzeppelin.com/
 
-## Create new proposal 
+## Create new proposal
 
 choose `Admin action`
 
