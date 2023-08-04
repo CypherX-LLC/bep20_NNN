@@ -75,6 +75,7 @@
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^2.1.6",
     "@openzeppelin/contracts-upgradeable": "4.1.0",
-    "@openzeppelin/test-helpers": "^0.5.15"
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "timers-promises": "^1.0.1"
   }
 }
