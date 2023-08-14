@@ -60,12 +60,12 @@ async function main() {
   // console.log("has whitelist role: ", await nvm_proxy.hasRole("0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2", "0x3a723e58c4808dde4591543282adc7d6b378715b"));
 
   // Coinsbit
-  const whitelistAddress = "0x75987b9edB5463CE1a3a857E11671424600927A4"
-  const txResult = await nvm_proxy.grantRole("0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2", whitelistAddress);
-  console.log("waiting for transaction to complete", txResult)
-  await waitUntilTransactionMined(txResult.hash, provider)
+  // const whitelistAddress = "0x75987b9edB5463CE1a3a857E11671424600927A4"
+  // const txResult = await nvm_proxy.grantRole("0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2", whitelistAddress);
+  // console.log("waiting for transaction to complete", txResult)
+  // await waitUntilTransactionMined(txResult.hash, provider)
   //await timers.setTimeout(5000);
-  console.log("has whitelist role: ", await nvm_proxy.hasRole("0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2", whitelistAddress));
+  // console.log("has whitelist role: ", await nvm_proxy.hasRole("0xbcaa5c4620c62b2fedc77ef4fe401724814aeef811d907416a737179a85b1ab2", whitelistAddress));
 
 
 
