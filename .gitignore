@@ -11,6 +11,7 @@ typechain/
 
 node_modules/
 .env
+yarn-error.log
 
 .yalc
 yalc.lock
@@ -22,3 +23,7 @@ deployments/localhost
 /.dapp
 
 .secrets.json
+
+.DS_Store
+
+

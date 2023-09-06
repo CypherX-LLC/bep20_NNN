@@ -16,7 +16,8 @@ import {
   MAINNET_PRIVATE_KEYS,
   TESTNET_PRIVATE_KEYS,
   ETHERSCAN_API_KEY,
-  BSC_MAINNET_RPC
+  BSC_MAINNET_RPC,
+  BSC_TESTNET_RPC
 } from './.secrets.json'
 
 const config: HardhatUserConfig = {
@@ -66,7 +67,7 @@ const config: HardhatUserConfig = {
       accounts: MAINNET_PRIVATE_KEYS
     },
     testnet: {
-      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      url: BSC_TESTNET_RPC,
       accounts: TESTNET_PRIVATE_KEYS
     }
   },
