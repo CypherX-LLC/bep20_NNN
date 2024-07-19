@@ -10,9 +10,9 @@ https://gnosis-safe.io/app/bnb:0xC12E74bC807387F96FEcccC8499014f6cbE5bF5C/home
 
 "DefaultProxyAdmin" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
 
-"NVMToken_Implementation" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
+"NNNToken_Implementation" https://bscscan.com/address/0x2D0bd1eb6e8577A2e73C7Fd772e587a0dEc9A9c3
 
-"NVMToken_Proxy" https://bscscan.com/address/0x5D5c5c1d14FaF8Ff704295b2F502dAA9D06799a0
+"NNNToken_Proxy" https://bscscan.com/address/0x5D5c5c1d14FaF8Ff704295b2F502dAA9D06799a0
 
 ## Audit
 
